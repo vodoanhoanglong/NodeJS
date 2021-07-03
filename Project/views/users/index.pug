@@ -1,0 +1,27 @@
+extends ../layouts/common   
+block content 
+
+    h2
+        span USERS  
+        a.btn.btn-primary(href= '/users/create', class='ms-5') New
+
+        .d-flex
+            form.ms-auto(action="/users/search", method= "GET", class="d-flex")
+                input(class="form-control", type="text", name= "q", value=values ? values : '')
+                button(class="btn btn-primary ms-2 ")  Search
+
+        table.table
+            tr 
+                th Avatar
+                th Name
+                th Phone 
+                th Actions
+
+            each user in users 
+                tr
+                    td
+                        img.rounded-circle(src=user.avatar, width="32")
+                    td= user.name
+                    td= user.phone
+                    td &nbsp;
+                        a.btn.btn-light(href= '/users/' + user._id) View

@@ -1,0 +1,13 @@
+extends ../layouts/common
+block content
+    h1 Login
+
+    //- nếu ko có action thì sẽ tự chạy trang hiện tại
+    form(method="POST")
+        .form-group
+            input#email.form-control(type="text", name="email", placeholder='Email', value=values ? values.email : '' required)  
+        .form-group
+            input#password.form-control(type="password", name="password", placeholder='Password', value=values ? values.password : '' required) 
+        if err 
+            .alert.alert-danger= err
+        button(class="btn btn-primary mt-3") Login 
