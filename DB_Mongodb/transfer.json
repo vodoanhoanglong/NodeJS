@@ -1,7 +1,0 @@
-{ 
-    "_id" : ObjectId("60df23c198cd842a20f61cb7"), 
-    "amount" : "100000", 
-    "accountId" : "28391183", 
-    "userId" : "60dd1673370cd0bfbc68a703", 
-    "__v" : NumberInt(0)
-}
